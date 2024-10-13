@@ -107,7 +107,6 @@ header {
 
 .project-wrapper {
     display: flex;
-    max-width: 1200px;
     width: 200%; /* 리스트가 길어질 수 있도록 두 배 너비 */
     animation: scroll 15s linear infinite; /* 애니메이션 추가 */
 }
