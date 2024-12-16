@@ -3,29 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Projects</title>
+    <title>Research Experience</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Project</a></li>
                 <li><a href="research.html">Research</a></li>
+                <li><a href="projects.html">Project</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="intro">
-            <div class="title">
-                <h2>Research Experience</h2>
+        <section class="research-container">
+            <h2>Research Experience</h2>
+
+            <nav>
+                <ul class="menu">
+                    <li><a href="#" class="category active" data-filter="all">All</a></li>
+                    <li><a href="#" class="category" data-filter="ai">AI</a></li>
+                    <li><a href="#" class="category" data-filter="xr">XR</a></li>
+                    <li><a href="#" class="category" data-filter="design">Design</a></li>
+                </ul>
+            </nav>
+
+            <div class="research-entry visible" data-category="design">
+                <div class="tags">
+                    <span class="tag review">Under Review</span>
+                    <span class="tag orange">Full Paper</span>
+                    <a href="files/EcoMail.pdf" target="_blank" class="tag pdf">pdf</a>
+                </div>
+                <h3>EcoMail: A Mailbox Design Proposal for Forming Sustainable Email Organization Habits</h3>
+                <p>HCIK 2025.</p>
+                <p><strong>Yunseo Choi*</strong>, Dayeun Choi*, Jee Hyun Kim*, Hajin Lim  (*co-first authorship)</p>
             </div>
-        </section>  
+
+            <div class="research-entry visible" data-category="ai">
+                <div class="tags">
+                    <span class="tag gray">In Prepare</span>
+                    <span class="tag light-gray">Full Paper</span>
+                </div>
+                <h3>A Study on the Influence and Potential of LLMs in Humanities Education: Focusing on the Use of ChatGPT</h3>
+                <p><strong>Yunseo Choi*</strong>, Dayeun Choi*, Seowoo Yoon*, Hajin Lim  (*co-first authorship)</p>
+            </div>
+
+            <div class="research-entry visible" data-category="xr design">
+                <div class="tags">
+                    <span class="tag gray">In Prepare</span>
+                    <span class="tag light-gray">Full Paper</span>
+                </div>
+                <h3>FlowVR: VR Movement Meditation for Mental Health Improvement</h3>
+                <p><strong>Yunseo Choi*</strong>, Seowoo Yoon*, Dakyeom Ahn*, Hajin Lim  (*co-first authorship)</p>
+            </div>
+        </section>
     </main>
+    <script src="research.js"></script>
+
+    <footer>
+        <p>Copyright © Yunseo Choi. All Rights Reserved.</p>
+    </footer>
+
 </body>
+
 </html>
