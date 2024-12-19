@@ -105,16 +105,50 @@ header {
     overflow: hidden; /* 스크롤 되는 부분 숨기기 */
 }
 
+/* 양쪽 고정된 그라데이션 */
+.projects::before,
+.projects::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40px; /* 그라데이션의 너비 */
+    pointer-events: none; /* 마우스 이벤트 무시 */
+    z-index: 2; /* 그라데이션이 가장 위로 보이도록 설정 */
+}
+
+.projects::before {
+    left: 0; /* 왼쪽 고정 */
+    background: linear-gradient(to right, white, transparent); /* 왼쪽에서 오른쪽으로 투명 */
+}
+
+.projects::after {
+    right: 0; /* 오른쪽 고정 */
+    background: linear-gradient(to left, white, transparent); /* 오른쪽에서 왼쪽으로 투명 */
+}
+
+
 .project-wrapper {
     display: flex;
-    width: 200%; /* 리스트가 길어질 수 있도록 두 배 너비 */
-    animation: scroll 15s linear infinite; /* 애니메이션 추가 */
+    gap: 20px;
+    width: 300%; /* 리스트가 길어질 수 있도록 두 배 너비 */
+    overflow-x: auto; /* 가로 스크롤 허용 */
+    scroll-behavior: smooth; /* 부드러운 스크롤 */
+    position: relative; /* 부모 요소로 설정 */
+    padding: 20px 0;
 }
+
+/* 스크롤바 숨기기 (선택 사항) */
+.project-wrapper::-webkit-scrollbar {
+    display: none; /* 스크롤바 숨기기 */
+}
+
 
 .project-list {
     display: flex;
     margin-left: 20px;
     gap: 20px;
+    animation: scroll 20s linear infinite; /* 무한 스크롤 애니메이션 */
 }
 
 .project-item {
